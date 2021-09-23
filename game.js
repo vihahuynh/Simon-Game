@@ -8,8 +8,10 @@ let userClickedPattern = []
 $(document).keypress(function(){
     if (isPlaying === false){
         $('h1').text("Let's play")
-        generate()
         isPlaying = true
+        setTimeout(function(){
+            generate()
+        }, 1000)
     }
 })
 
